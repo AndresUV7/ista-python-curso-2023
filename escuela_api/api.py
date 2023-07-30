@@ -12,6 +12,7 @@ def ends_with_newline(file_path):
         f.seek(-1, 2)
         return f.read() == b'\n'
 
+
 @app.route('/lista-estudiantes', methods=['GET'])
 def get_student_list_ascending_order():
     with open('datos/estudiante.csv', 'r', encoding='utf-8') as student_csv_file:
@@ -23,8 +24,8 @@ def get_student_list_ascending_order():
                                                           x['segundo_apellido'],
                                                           x['primer_nombre'],
                                                           x['segundo_nombre'],))
-
     return jsonify(student_list_ascending_order)
+
 
 @app.route('/registro-asistencia', methods=['POST'])
 def attendance_record():
@@ -46,16 +47,13 @@ def attendance_record():
 def total_attendance():
     id = request.args.get('cedula_estudiante')
     course = request.args.get('nombre_curso')
-
     if not id or not course:
         return jsonify({'error': 'Parámetros faltantes en la solicitud!'}), 400
-
     total_attendance = 0
     with open(ATTENDANCE_FILE_PATH, 'r') as attendance_file:
         for row in csv.DictReader(attendance_file):
             if row['cedula'] == id and row['materia'] == course:
                 total_attendance += 1
-
     return (jsonify({'total_asistencias': total_attendance}), 200) if total_attendance>0 else (jsonify({'error': 'El estudiante o la materia requerida no existen'}), 404)
 
 
