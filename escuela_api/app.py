@@ -10,7 +10,7 @@ app = Flask(__name__)
 
 ATTENDANCE_RECORD_FIELDS = ['cedula', 'materia', 'fecha_año', 'fecha_mes', 'fecha_dia']
 
-ATTENDANCE_FILE_PATH = 'datos/asistencia.csv'
+ATTENDANCE_FILE_PATH = 'escuela_api/datos/asistencia.csv'
 
 def ends_with_newline(file_path):
     with open(file_path, 'rb') as f:
@@ -22,7 +22,7 @@ def ends_with_newline(file_path):
 def get_student_list_ascending_order():
     in_database = request.args.get('in_database')
     in_html = request.args.get('in_html')
-    with open('datos/estudiante.csv', 'r', encoding='utf-8') as student_csv_file:
+    with open('escuela_api/datos/estudiante.csv', 'r', encoding='utf-8') as student_csv_file:
         students = csv.DictReader(student_csv_file)
         student_list = list(students)
         student_list_ascending_order = sorted(student_list,
