@@ -48,7 +48,7 @@ def create_student_attendance_record():
         else:
             with open(ATTENDANCE_FILE_PATH, 'a', newline='') as attendance_file:
                 writer = csv.writer(attendance_file)
-                if not ends_with_newline("datos/asistencia.csv"):
+                if not ends_with_newline(ATTENDANCE_FILE_PATH):
                     attendance_file.write('\n') 
                 writer.writerow([attendance[ATTENDANCE_RECORD_FIELDS[0]], attendance[ATTENDANCE_RECORD_FIELDS[1]],
                                 attendance[ATTENDANCE_RECORD_FIELDS[2]], attendance[ATTENDANCE_RECORD_FIELDS[3]],
