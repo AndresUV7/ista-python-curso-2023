@@ -1,6 +1,6 @@
 import json
 import pytest
-from escuela_api.api import app
+from escuela_api.app import app
 
 EXPECTED_STUDENT_LIST = [
   {

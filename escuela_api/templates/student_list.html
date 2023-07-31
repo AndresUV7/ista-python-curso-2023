@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lista de Estudiantes</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.0/flowbite.min.css" rel="stylesheet" />
+</head>
+<body>
+    <h1 class="text-4xl font-extrabold dark:text-white py-3 text-center">Lista de Estudiantes</h1>
+    <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
+        <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+            <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+                <tr>
+                    <th scope="col" class="px-6 py-3">
+                        Primer Apellido
+                    </th>
+                    <th scope="col" class="px-6 py-3">
+                        Segundo Apellido
+                    </th>
+                    <th scope="col" class="px-6 py-3">
+                        Primer Nombre
+                    </th>
+                    <th scope="col" class="px-6 py-3">
+                        Segundo Nombre
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for student in student_list %}
+                <tr
+                    class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+                    <td class="px-6 py-4">
+                        {{ student['primer_apellido'] }}
+                    </td>
+                    <td class="px-6 py-4">
+                        {{ student['segundo_apellido'] }}
+                    </td>
+                    <td class="px-6 py-4">
+                        {{ student['primer_nombre'] }}
+                    </td>
+                    <td class="px-6 py-4">
+                        {{ student['segundo_nombre'] }}
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.0/flowbite.min.js"></script>
+</body>
+</html>

@@ -1,5 +1,5 @@
 import pytest
-from escuela_api.api import app
+from escuela_api.app import app
 
 @pytest.fixture
 def client():
