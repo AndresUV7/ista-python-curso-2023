@@ -29,7 +29,7 @@ EXPECTED_STUDENT_LIST = [
     "primer_apellido": "Ramírez",
     "primer_nombre": "David",
     "segundo_apellido": "Arévalo",
-    "segundo_nombre": "Alejando"
+    "segundo_nombre": "Alejandro"
   },
   {
     "cedula": "0105813877",
