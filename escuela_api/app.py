@@ -50,9 +50,11 @@ def create_student_attendance_record():
                 writer = csv.writer(attendance_file)
                 if not ends_with_newline(ATTENDANCE_FILE_PATH):
                     attendance_file.write('\n') 
-                writer.writerow([attendance[ATTENDANCE_RECORD_FIELDS[0]], attendance[ATTENDANCE_RECORD_FIELDS[1]],
-                                attendance[ATTENDANCE_RECORD_FIELDS[2]], attendance[ATTENDANCE_RECORD_FIELDS[3]],
-                                    attendance[ATTENDANCE_RECORD_FIELDS[4]]])
+                writer.writerow([attendance[ATTENDANCE_RECORD_FIELDS[0]],
+                                  attendance[ATTENDANCE_RECORD_FIELDS[1]],
+                                  attendance[ATTENDANCE_RECORD_FIELDS[2]],
+                                  attendance[ATTENDANCE_RECORD_FIELDS[3]],
+                                  attendance[ATTENDANCE_RECORD_FIELDS[4]]])
         return jsonify({'message': 'Asistencia registrada exitosamente!.'}), 201
     else:
         return jsonify({'error': 'Datos incompletos o mal formados en la solicitud.'}), 400
@@ -75,6 +77,7 @@ def get_student_total_attendance_by_course():
                     total_attendance += 1
     return (jsonify({'total_asistencias': total_attendance}), 200) if total_attendance>0 \
           else (jsonify({'error': 'El estudiante o la materia requerida no existen'}), 404)
+          #El error 404 "Not Found" se muestra cuando no se encuentra un recurso en línea
 
 
 if __name__ == '__main__':
