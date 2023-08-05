@@ -3,16 +3,16 @@
 
 **Poyecto para curso:** Introducción a Python - Usos en Servicios Web
 
-##Instalar dependencias:
+## Instalar dependencias:
 ```py
 pip install -r requirements.txt
 ```
 
-##Ejecutar el proyecto:
+## Ejecutar el proyecto:
 ```py
 flask run
 ```
-##Obtener lista de estudiantes ordenada ascendentemente (JSON):
+## Obtener lista de estudiantes ordenada ascendentemente (JSON):
 
 ```json
 [
@@ -61,7 +61,7 @@ http://127.0.0.1:5000/lista-estudiantes
 *GET*
 http://127.0.0.1:5000/lista-estudiantes?in_database=1
 
-##Obtener lista de estudiantes ordenada ascendentemente (Tabla HTML ):
+## Obtener lista de estudiantes ordenada ascendentemente (Tabla HTML ):
 
 <img src="https://khkysohlylavihvzpybj.supabase.co/storage/v1/object/public/ista-python-curso-2023/students_list_html.webp?t=2023-08-05T00%3A19%3A51.805Z" />
 
@@ -73,7 +73,7 @@ http://127.0.0.1:5000/lista-estudiantes?in_html=1
 *GET*
 http://127.0.0.1:5000/lista-estudiantes?in_html=1&?in_database=1
 
-##Registrar una asistencia:
+## Registrar una asistencia:
 
 <img src="https://khkysohlylavihvzpybj.supabase.co/storage/v1/object/public/ista-python-curso-2023/register_attendance_api_call.webp" />
 
@@ -85,7 +85,7 @@ http://127.0.0.1:5000//registro-asistencia
 *POST*
 http://127.0.0.1:5000//registro-asistencia?in_database=1
 
-##Consultar total de asistencias:
+## Consultar total de asistencias:
 
 <img src="https://khkysohlylavihvzpybj.supabase.co/storage/v1/object/public/ista-python-curso-2023/total_attendance_student_api_call.webp?t=2023-08-05T00%3A28%3A15.070Z" />
 
@@ -97,9 +97,9 @@ http://127.0.0.1:5000/total-asistencias?cedula_estudiante=0105813877&nombre_mate
 *GET*
 http://127.0.0.1:5000/total-asistencias?cedula_estudiante=0105813877&nombre_materia=python&in_database=1
 
-##Ejecutar los tests:
+## Ejecutar los tests:
 ```py
 pytest
 ```
-##Log de chequeos para tests con Github Actions:
+## Log de chequeos para tests con Github Actions:
 https://github.com/AndresUV7/ista-python-curso2023/actions
