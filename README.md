@@ -12,7 +12,7 @@ pip install -r requirements.txt
 ```py
 flask run
 ```
-## Obtener lista de estudiantes ordenada ascendentemente (JSON):
+## Obtener lista de estudiantes ordenada ascendentemente (<ins>JSON</ins>):
 
 ```json
 [
@@ -53,53 +53,70 @@ flask run
   }
 ]
 ```
-<u>-DataSource: Archivo (CSV)</u>
-*GET*
-http://127.0.0.1:5000/lista-estudiantes
+* DataSource: Archivo (CSV)
 
-<u>-DataSource: base de datos (PostrgreSQL)</u>
-*GET*
-http://127.0.0.1:5000/lista-estudiantes?in_database=1
+  *GET*
+  
+  http://127.0.0.1:5000/lista-estudiantes
+  
+* DataSource: base de datos (PostrgreSQL)
 
-## Obtener lista de estudiantes ordenada ascendentemente (Tabla HTML ):
+  *GET*
+  
+  http://127.0.0.1:5000/lista-estudiantes?in_database=1
+
+## Obtener lista de estudiantes ordenada ascendentemente (<ins>Tabla HTML</ins>):
 
 <img src="https://khkysohlylavihvzpybj.supabase.co/storage/v1/object/public/ista-python-curso-2023/students_list_html.webp?t=2023-08-05T00%3A19%3A51.805Z" />
 
-<u>-DataSource: archivo (CSV)</u>
-*GET*
-http://127.0.0.1:5000/lista-estudiantes?in_html=1
+* DataSource: archivo (CSV)
 
-<u>-DataSource: base de datos (PostrgreSQL)</u>
-*GET*
-http://127.0.0.1:5000/lista-estudiantes?in_html=1&?in_database=1
+  *GET*
+  
+  http://127.0.0.1:5000/lista-estudiantes?in_html=1
+
+* DataSource: base de datos (PostrgreSQL)
+
+  *GET*
+  
+  http://127.0.0.1:5000/lista-estudiantes?in_html=1&?in_database=1
 
 ## Registrar una asistencia:
 
 <img src="https://khkysohlylavihvzpybj.supabase.co/storage/v1/object/public/ista-python-curso-2023/register_attendance_api_call.webp" />
 
-<u>-DataSource: archivo (CSV)</u>
-*POST*
-http://127.0.0.1:5000//registro-asistencia
+* DataSource: archivo (CSV)</u>
 
-<u>-DataSource: base de datos (PostrgreSQL)</u>
-*POST*
-http://127.0.0.1:5000//registro-asistencia?in_database=1
+  *POST*
+  
+  http://127.0.0.1:5000//registro-asistencia
+  
+* DataSource: base de datos (PostrgreSQL)
+
+  *POST*
+  
+  http://127.0.0.1:5000//registro-asistencia?in_database=1
 
 ## Consultar total de asistencias:
 
 <img src="https://khkysohlylavihvzpybj.supabase.co/storage/v1/object/public/ista-python-curso-2023/total_attendance_student_api_call.webp?t=2023-08-05T00%3A28%3A15.070Z" />
 
-<u>-DataSource: archivo (CSV)</u>
-*GET*
-http://127.0.0.1:5000/total-asistencias?cedula_estudiante=0105813877&nombre_materia=python
+* DataSource: archivo (CSV)
 
-<u>-DataSource: base de datos (PostrgreSQL)</u>
-*GET*
-http://127.0.0.1:5000/total-asistencias?cedula_estudiante=0105813877&nombre_materia=python&in_database=1
+  *GET*
+  
+  http://127.0.0.1:5000/total-asistencias?cedula_estudiante=0105813877&nombre_materia=python
+
+* DataSource: base de datos (PostrgreSQL)
+
+  *GET*
+  
+  http://127.0.0.1:5000/total-asistencias?cedula_estudiante=0105813877&nombre_materia=python&in_database=1
 
 ## Ejecutar los tests:
 ```py
 pytest
 ```
 ## Log de chequeos para tests con Github Actions:
+
 https://github.com/AndresUV7/ista-python-curso2023/actions
