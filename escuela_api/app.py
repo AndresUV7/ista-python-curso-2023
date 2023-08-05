@@ -36,10 +36,12 @@ def get_student_list_ascending_order():
                                                           x['primer_nombre'],
                                                           x['segundo_nombre'],))
     if in_html == "1":
-        sorted_student_list = student_list_ascending_order_from_database if in_database == "1" else student_list_ascending_order
+        sorted_student_list = (student_list_ascending_order_from_database if in_database == "1"
+                                else student_list_ascending_order)
         return render_template('student_list.html', student_list=sorted_student_list)
     else:
-        return json.dumps(student_list_ascending_order_from_database) if in_database == "1" else json.dumps(student_list_ascending_order) 
+        return (json.dumps(student_list_ascending_order_from_database) if in_database == "1" 
+                else json.dumps(student_list_ascending_order) )
 
 
 @app.route('/registro-asistencia', methods=['POST'])
