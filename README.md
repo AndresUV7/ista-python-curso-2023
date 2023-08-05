@@ -67,7 +67,7 @@ flask run
 
 ## Obtener lista de estudiantes ordenada ascendentemente (<ins>Tabla HTML</ins>):
 
-<img src="https://khkysohlylavihvzpybj.supabase.co/storage/v1/object/public/ista-python-curso-2023/students_list_html.webp?t=2023-08-05T00%3A19%3A51.805Z" />
+<img src="https://khkysohlylavihvzpybj.supabase.co/storage/v1/object/public/ista-python-curso-2023/students_list_html.webp?t=2023-08-05T00%3A19%3A51.805Z"/>
 
 * DataSource: archivo (CSV)
 
