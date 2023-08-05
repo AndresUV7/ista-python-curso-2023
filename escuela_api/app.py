@@ -1,4 +1,4 @@
-from flask import Flask, jsonify, render_template, request
+from flask import Flask, jsonify, redirect, render_template, request
 import csv
 import json
 from escuela_api.database.store import (
@@ -18,6 +18,9 @@ def ends_with_newline(file_path):
         f.seek(-1, 2)
         return f.read() == b'\n'
 
+@app.route('/')
+def redirect_to_student_list_in_html():
+    return redirect('/lista-estudiantes?in_html=1')
 
 @app.route('/lista-estudiantes', methods=['GET'])
 def get_student_list_ascending_order():
