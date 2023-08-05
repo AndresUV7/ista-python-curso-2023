@@ -1,5 +1,6 @@
 from flask import Flask, jsonify, render_template, request
 import csv
+import json
 from escuela_api.database.store import (
     student_list_ascending_order_from_database,
     get_student_total_attendance_by_course_from_database,
@@ -35,7 +36,7 @@ def get_student_list_ascending_order():
         sorted_student_list = student_list_ascending_order_from_database if in_database == "1" else student_list_ascending_order
         return render_template('student_list.html', student_list=sorted_student_list)
     else:
-        return jsonify(student_list_ascending_order_from_database) if in_database == "1" else jsonify(student_list_ascending_order) 
+        return json.dumps(student_list_ascending_order_from_database) if in_database == "1" else json.dumps(student_list_ascending_order) 
 
 
 @app.route('/registro-asistencia', methods=['POST'])
