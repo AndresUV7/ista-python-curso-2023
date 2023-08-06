@@ -8,7 +8,7 @@
 pip install -r requirements.txt
 ```
 
-## Ejecutar el proyecto ⚗️:
+## Ejecutar el proyecto ▶️⚗️:
 ```py
 flask run
 ```
